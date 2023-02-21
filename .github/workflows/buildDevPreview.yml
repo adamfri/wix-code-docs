@@ -33,7 +33,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: slackapi/slack-github-action@v1.23.0
-        if: ${{ env.changes_pushed == true }}
+       # if: ${{ env.changes_pushed == true }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         
