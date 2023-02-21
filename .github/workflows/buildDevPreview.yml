@@ -20,13 +20,13 @@ jobs:
           npm install get-all-files
           git config user.email "adamfri@wix.com"
           git config user.name "Adam Friedmann"
-          git checkout -b auto-generate-dev-preview
+          git checkout -b dev-preview-update-${{github.head_ref}}
           node scripts/buildDevPreviewList.mjs
           git add .
           DIFF=$(git status --porcelain)
           if [[ "$DIFF" == *"developer-preview.md"* ]]; then
             git commit -m "New Dev Preview List"
-            git push --set-upstream origin dev-preview-update-${{github.ref_name}} --force
+            git push --set-upstream origin dev-preview-update-${{github.head_ref}} --force
             echo "changes_pushed=true" >> $GITHUB_ENV
           fi
         env:
