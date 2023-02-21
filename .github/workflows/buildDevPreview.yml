@@ -29,6 +29,7 @@ jobs:
             git push --set-upstream origin auto-dev-preview-update-${{github.head_ref}} --force
             echo "changes_pushed=true" >> $GITHUB_ENV
           fi
+          echo env.changes_pushed
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: slackapi/slack-github-action@v1.23.0
