@@ -31,12 +31,11 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: cinotify/github-action@main
+      - uses: slackapi/slack-github-action@v1.23.0
         if: ${{ env.changes_pushed == true }}
-        with:
-          to: 'adamfri@wix.com'
-          subject: 'Merge Dev Preview List'
-          body: 'The dev preview list in the Velo has changed. Please merge it.'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
 
       
 
