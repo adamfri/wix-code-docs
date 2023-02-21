@@ -55,5 +55,9 @@ This is a list of the APIs that are currently in Developer Preview mode.
 |---|---|---|
 | wix-activity-counters.v2 | ActivityCounters | [getActivityCounters](/wix-activity-counters-v2/activitycounters/getactivitycounters)<br>[queryActivityCounters](/wix-activity-counters-v2/activitycounters/queryactivitycounters)<br>[setActivityCounters](/wix-activity-counters-v2/activitycounters/setactivitycounters)<br> |
 | wix-blog-backend | Events | [onTagUpdated](/wix-blog-backend/events/ontagupdated)<br> |
+| wix-bookings.v2 | AvailabilityCalendar | [queryAvailability](/wix-bookings-v2/availabilitycalendar/queryavailability)<br> |
+| wix-bookings.v2 | Bookings | [cancelBooking](/wix-bookings-v2/bookings/cancelbooking)<br>[confirmBooking](/wix-bookings-v2/bookings/confirmbooking)<br>[declineBooking](/wix-bookings-v2/bookings/declinebooking)<br>[rescheduleBooking](/wix-bookings-v2/bookings/reschedulebooking)<br>[updateNumberOfParticipants](/wix-bookings-v2/bookings/updatenumberofparticipants)<br> |
+| wix-bookings.v2 | BookingsPricing | [calculatePrice](/wix-bookings-v2/bookingspricing/calculateprice)<br>[previewPrice](/wix-bookings-v2/bookingspricing/previewprice)<br> |
+| wix-bookings.v2 | ExtendedBookings | [queryExtendedBookings](/wix-bookings-v2/extendedbookings/queryextendedbookings)<br> |
 | wix-ecom-backend | CurrentCart | [getCurrentCart](/wix-ecom-backend/currentcart/getcurrentcart)<br> |
 <!-- END TABLE -->
