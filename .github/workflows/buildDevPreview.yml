@@ -28,11 +28,17 @@ jobs:
             git commit -m "New Dev Preview List"
             git push --set-upstream origin auto-dev-preview-update-${{github.head_ref}} --force
             echo "changes_pushed=yes" >> $GITHUB_ENV
+            echo "branch_name=auto-dev-preview-update-${{github.head_ref}}" >> $GITHUB_ENV
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: slackapi/slack-github-action@v1.23.0
         if: ${{ env.changes_pushed == 'yes' }}
+        with:
+          payload: |
+            {
+              "branch_name" : ${{ env.branch_name }}
+            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         
