@@ -37,7 +37,7 @@ jobs:
         with:
           payload: |
             {
-              "branch_name" : ${{ env.branch_name }}
+              "branch_name" : "${{ env.branch_name }}"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
